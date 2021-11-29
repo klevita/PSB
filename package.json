@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && rsync -e 'ssh -p 2848' -a --delete-before dist/ new_command@cnc.kovalev.team:/home/new_command/psb-front/ --delete"
   },
   "dependencies": {
     "core-js": "^3.6.5",
