@@ -1,15 +1,29 @@
 <template>
-    <div>
-        <div class="fontTest">HomePage</div>
-        <div class="fontTest2">HomePage</div>
-        <div>{{this.user1}}</div>
-        <v-btn v-on:click="this.setUser">
-            set user
-        </v-btn>
-        <v-btn v-on:click="this.dropUser">
-            drop user
-        </v-btn>
-        <img :src="require('@/assets/img/LOGO.svg')">
+    <div class="base">
+        
+     <div class="header"> 
+         <img :src="require('@/assets/img/Header.svg')" style= "width:100%">
+    </div>
+    <div class="d-flex">
+        <div> <img :src="require('@/assets/img/achieve.svg')" style= "width:100px"> </div>
+        <div>Мои достижения</div>
+        </div>
+        <div class="d-flex align-center">
+        <img :src="require('@/assets/img/Star1.svg')">
+        <div>10</div>
+        </div>
+    <div class="search">
+           <v-text-field
+            label="Поиск по базе данных"
+            prepend-inner-icon="mdi-magnify"
+            filled
+            rounded
+            color="#EA5616"
+            background-color="#EFF0F8"
+            dense
+          ></v-text-field>
+     </div>
+
     </div>
 </template>
 
@@ -44,14 +58,21 @@
 </script>
 
 <style scoped>
-    .fontTest {
-        font-family: "verdana-regular";
+   
+.base{
+   background:#EFF0F8;
+   min-height: 100vh;
+   position: absolute;
 
-    }
+}
 
-    .fontTest2 {
-        font-family: "gilroy-regular";
+.search{
+    float: right;
+    position: relative;
+    top: -148px;
+    left: -30px;
+    width: 460px;
 
-    }
+}
 
 </style>
