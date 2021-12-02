@@ -1,5 +1,5 @@
 <template>
-    <a class="button"  v-bind:style="btnStyle" v-bind:href="ret_link" v-on:click="emitClick()">{{this.text}}</a>
+    <a class="button" @mouseover="upHere = true" @mouseleave="upHere = false"  v-bind:style="btnStyle" v-bind:href="ret_link" v-on:click="emitClick()">{{this.text}}</a>
 </template>
 
 <script>
@@ -18,10 +18,12 @@
                 type: String,
                 required: true,
             }
-
         },
         data: () => ({
+            upHere:false,
             btnStyle: {
+                marginTop:"0",
+                boxShadow:null,
                 color:null,
                 backgroundColor:null,
                 border:null
@@ -57,8 +59,14 @@
         },
         methods: {
             emitClick(){
+                this.btnStyle.marginTop="2px";
+
+                this.btnStyle.marginTop="0px";
                 this.$emit('click')
             },
+        },
+        watch:{
+
         }
     }
 </script>
@@ -67,9 +75,14 @@
     .button{
         border-radius:50px;
         width:160px;
+        transition: 0.1ms;
         display: inline-block;
         text-align: center;
-        transition: all ease-in-out 0.15s;
         padding: 6px 2px 6px 2px;
+        box-shadow: 0 2px #999;
+    }
+    .button:active {
+        transform: translateY(2px);
+        box-shadow: 0 0 #666;
     }
 </style>
