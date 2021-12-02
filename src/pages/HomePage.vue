@@ -1,16 +1,11 @@
 <template>
-    <div class="base">
-        <img src='../assets/test.png'>
-    </div>
-
+    <div>HomePage</div>
 </template>
 
 <script>
     import UserApiService from "@/services/UserApiService";
-
     export default {
-        name: 'HelloWorld',
-
+        name: "Home",
         data: () => ({
             userData: null,
         }),
@@ -19,3 +14,7 @@
         },
     }
 </script>
+
+<style scoped>
+
+</style>
