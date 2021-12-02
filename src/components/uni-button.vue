@@ -1,5 +1,5 @@
 <template>
-    <a class="button" @mouseover="upHere = true" @mouseleave="upHere = false"  v-bind:style="btnStyle" v-bind:href="ret_link" v-on:click="emitClick()">{{this.text}}</a>
+    <a class="button" @mouseover="upHere = true" @mouseleave="upHere = false"  v-bind:style="btnStyle" v-on:click="emitClick()">{{this.text}}</a>
 </template>
 
 <script>
@@ -16,7 +16,8 @@
             },
             link:{
                 type: String,
-                required: true,
+                required: false,
+                default:null
             }
         },
         data: () => ({
@@ -59,10 +60,11 @@
         },
         methods: {
             emitClick(){
-                this.btnStyle.marginTop="2px";
 
-                this.btnStyle.marginTop="0px";
                 this.$emit('click')
+                if(this.link){
+                    this.$router.push(this.link)
+                }
             },
         },
         watch:{

@@ -4,7 +4,7 @@
         <div>
             <p class="head">Страница не найдена</p>
             <p class="information">Возможно, вы ввели неправильный адрес, или страница была удалена</p>
-            <btn color="1" text = "На главную" link="/home"></btn>
+            <btn color="3" text = "На главную" link="/home"></btn>
         </div>
 
     </div>

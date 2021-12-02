@@ -8,10 +8,10 @@
 
 <script>
     import baseLayout from "@/layouts/baseLayout"
-
+    import store from './store/store'
     export default {
         name: 'App',
-
+        store: store,
         components: {
             baseLayout
         },

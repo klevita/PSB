@@ -10,6 +10,11 @@ const routes = [
         component: () => import("@/pages/HomePage.vue")
     },
     {
+        path: "/auth",
+        name: "AuthPage",
+        component: () => import("@/pages/AuthPage.vue")
+    },
+    {
         path: "*",
         name: "404",
         component: () => import("@/pages/NotFoundPage.vue")
