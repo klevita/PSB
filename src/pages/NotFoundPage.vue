@@ -1,12 +1,12 @@
 <template>
-    <div class="base-contain">
-        <div class = "images">
-            <div class="image_404"></div>
-            <div class="image_smile"></div>
+    <div class="wrapper">
+        <div class="image_404"></div>
+        <div>
+            <p class="head">Страница не найдена</p>
+            <p class="information">Возможно, вы ввели неправильный адрес, или страница была удалена</p>
+            <router-link tag="a" to="/home" class="button">Перейти на главную</router-link>
         </div>
-        <p class="head" v-bind:style="text_style">Страница не найдена</p>
-        <p class="information" v-bind:style="text_style">Возможно, вы ввели неправильный адрес, или страница была удалена</p>
-        <router-link tag="a" to="/home" class="button">Перейти на главную</router-link>
+
     </div>
 </template>
 
@@ -14,11 +14,6 @@
     export default {
         name: "NotFoundPage",
         data:()=>({
-            text_style:{
-                width:'400px',
-                height:'100px',
-            },
-            margin_left:"0px"
         }),
         mounted () {
         },
@@ -28,67 +23,38 @@
 </script>
 
 <style scoped>
-    .base-contain{
-        background-color: white;
-        width: 1300px;
-        margin: 0 auto;
-        padding: 30px 0;
-        min-height: 95vh;
-        position: absolute;
-    }
     .head{
-        position: absolute;
-        left: 223px;
-        top: 350px;
         font-weight: 500;
         font-size: 34px;
-        color: #1492e6;
+        color: #292b61;
     }
     .button{
-        border: 1px solid #1492e6;
+        border: 1px solid #292b61;
         margin-right: 5px;
         margin-bottom: 10px;
         display: inline-block;
         justify-content: center;
         background-color: inherit;
-        border-right: 1px solid rgb(20, 146, 230);
-        position: absolute;
-        left: 223px;
+        border-right: 1px solid #292b61;
         text-align: center;
         display: inline-block;
         transition: all ease-in-out 0.15s;
         padding: 8px 15px 8px 15px;
-        color: #1492e6;
+        color: #292b61;
     }
-
-    .information{
-        position: absolute;
-        left: 223px;
-        top: 400px;
-    }
-    .images{
-        display: flex;
-    }
-    .image_smile{
-        background-image: url(../assets/img/einstain_smile.png);
-        background-color: white;
-        width:327px;
-        height:318px;
-        margin-top: 120px;
-        margin-right: auto;
+    .wrapper{
+        padding-left:20%;
+        padding-top:6%;
     }
     .image_404{
-        background-image: url(../assets/img/404.png);
-        width:405px;
-        height:218px;
-        margin-top: 120px;
-        margin-right: 125px;
-        margin-left: auto;
-    }
+        background-image: url(../assets/img/404.svg);
+        width:805px;
+        height:318px;
 
+    }
     a:hover {
-        background-color: #1492e6;;
-        color:black
+        background-color: #292b61;
+        color:white
     }
 
 </style>
