@@ -4,20 +4,26 @@
         <div>
             <p class="head">Страница не найдена</p>
             <p class="information">Возможно, вы ввели неправильный адрес, или страница была удалена</p>
-            <router-link tag="a" to="/home" class="button">Перейти на главную</router-link>
+            <btn color="1" text = "На главную" link="/home"></btn>
         </div>
 
     </div>
 </template>
 
 <script>
+    import btn from "../components/uni-button"
     export default {
+        components: { btn},
         name: "NotFoundPage",
         data:()=>({
+
         }),
         mounted () {
         },
         methods:{
+            ch(){
+                this.$router.push("/home");
+            }
         }
     };
 </script>
@@ -28,20 +34,7 @@
         font-size: 34px;
         color: #292b61;
     }
-    .button{
-        border: 1px solid #292b61;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        display: inline-block;
-        justify-content: center;
-        background-color: inherit;
-        border-right: 1px solid #292b61;
-        text-align: center;
-        display: inline-block;
-        transition: all ease-in-out 0.15s;
-        padding: 8px 15px 8px 15px;
-        color: #292b61;
-    }
+
     .wrapper{
         padding-left:20%;
         padding-top:6%;
@@ -51,10 +44,6 @@
         width:805px;
         height:318px;
 
-    }
-    a:hover {
-        background-color: #292b61;
-        color:white
     }
 
 </style>
