@@ -1,6 +1,7 @@
 <template>
     <div>
         <v-form ref="form" v-model="is_valid" class="login_form">
+            <div>Вход</div>
             <v-text-field
                     v-model="email"
                     :rules="emailRules"
@@ -16,21 +17,28 @@
                     type="password"
                     required
             ></v-text-field>
-            <div style="display:inline-block">
-                <a class="button" color="#1492e6"  v-on:click="login">Войти</a>
-                <v-btn style="margin-left:66px" v-on:click="to_reg">Регистрация</v-btn>
+            <div style="text-align: center;margin-top:10px">
+                <btn color="1" text="Войти" v-on:click="login"></btn>
+            </div>
+            <div style="text-align: center;margin-top:10px">
+                <btn color="3" text="Регистрация" v-on:click="to_reg"></btn>
             </div>
         </v-form>
     </div>
 </template>
 
 <script>
+    import btn from "@/components/uni-button"
+
     export default {
         name: "Login",
+        components: {
+            btn,
+        },
         data: () => ({
-            is_valid:false,
+            is_valid: false,
             email: "",
-            emailRules:[
+            emailRules: [
                 v => !!v || '',
                 v => /.+@.+\..+/.test(v) || 'Неверный Адрес',
             ],
@@ -42,51 +50,29 @@
         }),
         methods: {
             login() {
-                if(this.$refs.form.validate()){
+                if (this.$refs.form.validate()) {
                     let email = this.email;
-                    let password = this.pass;
-                    this.$store.dispatch("loginUser", { email, password })
-                    // .then(() => this.$router.push("../auth"))
-                    // .catch(err => console.log(err));
+                    let passwrd = this.pass;
+                    this.$store.commit("setUser", {email, passwrd})
+                    this.$router.push("/home");
                 }
             },
-            to_reg(){
+            to_reg() {
                 this.$emit('reg')
             }
         },
-        computed:{
-
-        },
-        mounted(){
+        computed: {},
+        mounted() {
         }
     };
 </script>
 
 <style scoped>
-    .button{
-        border: 1px solid #292b61;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        display: inline-block;
-        justify-content: center;
-        background-color: inherit;
-        border-right: 1px solid #292b61;
-        text-align: center;
-        display: inline-block;
-        transition: all ease-in-out 0.15s;
-        padding: 8px 15px 8px 15px;
-        color: #292b61;
-        border-radius:5px;
-    }
-    .button:hover {
-         background-color: #292b61;
-         color:white
-    }
-    .login_form{
-        border:1px solid #959595;
-        width:340px;
+    .login_form {
+        border: 1px solid #959595;
+        width: 340px;
         padding: 20px;
-        border-radius:30px;
-        background-color:#ffffff;
+        border-radius: 30px;
+        background-color: #ffffff;
     }
 </style>

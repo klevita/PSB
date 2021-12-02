@@ -4,7 +4,7 @@
             <div>
                 <Register v-on:logg="change_mode(0)" v-show="log && !isLoggedIn"/>
                 <Login v-on:reg="change_mode(1)" v-show="!log && !isLoggedIn"/>
-                <span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
+                <span v-if="isLoggedIn"><a @click="logout">Logout</a></span>
             </div>
         </div>
     </div>
@@ -27,10 +27,8 @@
         }),
         methods: {
             logout: function() {
-                this.$store.dispatch("logout")
-                    .then(() => {
-                        this.$router.push("/login");
-                    });
+                this.$store.commit("dropUser")
+
             },
             change_mode(val) {
                 this.log = val;

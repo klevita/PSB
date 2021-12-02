@@ -1,22 +1,22 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
+import Vue from 'vue'
+import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist';
 Vue.use(Vuex);
-
+const vuexPersistence = new VuexPersistence({
+    storage: window.localStorage,
+});
 export default new Vuex.Store({
     state: {
-        user: null
+        user: null,
+        navigation: { path: '/home' }
     },
-    mutations: {
-        setUser(state) {
-            state.user = {
-                userName: "TestUser",
-                userToken: "testToken"
-            };
+    mutations:{
+        setUser (state,user) {
+            state.user=user;
         },
-        dropUser(state) {
-            state.user = null;
+        dropUser(state){
+            state.user=null;
         }
     },
-    actions: {}
-});
+    plugins: [vuexPersistence.plugin]
+})
