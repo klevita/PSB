@@ -4,7 +4,7 @@
 
         <main class="main">
             <div class="wrapper" >
-                
+
                 <slot/>
             </div>
         </main>

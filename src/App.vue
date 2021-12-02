@@ -21,3 +21,21 @@
         }),
     };
 </script>
+<style>
+    @font-face {
+        font-family: "gilroy-reguar";
+        src: url(./assets/fonts/gilroy-regular.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: "gilroy-semibold";
+        src: url(./assets/fonts/gilroy-semibold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: "verdana-regular";
+        src: url(./assets/fonts/verdana-regular.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: "verdana-bold";
+        src: url(./assets/fonts/verdana-bold.ttf) format('truetype');
+    }
+</style>
