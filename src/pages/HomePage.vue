@@ -9,6 +9,7 @@
         <v-btn v-on:click="this.dropUser">
             drop user
         </v-btn>
+        <img :src="require('@/assets/img/LOGO.svg')">
     </div>
 </template>
 
