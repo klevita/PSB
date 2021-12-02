@@ -24,7 +24,7 @@
             this.userData = await UserApiService.getById();
         },
         created() {
-            console.log()
+
         },
         methods: {
             dropUser() {
