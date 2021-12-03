@@ -21,6 +21,11 @@ const routes = [
         component: () => import("@/pages/NotFoundPage.vue")
     },
     {
+        path: "/achieves",
+        name: "achieve",
+        component: () => import("@/pages/Achieves.vue")
+    },
+    {
         path: "*",
         redirect: "/404"
     }

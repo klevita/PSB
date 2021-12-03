@@ -12,7 +12,7 @@
 <script>
     import btn from "../components/uni-button"
     export default {
-        components: { btn, IconCard},
+        components: { btn},
         name: "NotFoundPage",
         data:()=>({
 

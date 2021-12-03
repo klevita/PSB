@@ -21,7 +21,7 @@
             </div>
             <div>
                 <div style="display:inline-block;margin-top:14px;float:left">
-                    Мои достижения
+                   <a href="/achieves" style="color: #292b61;">Мои достижения</a> 
                 </div>
                 <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
                     <img :src="require('@/assets/img/achieve.svg')" >
@@ -38,6 +38,10 @@
 </script>
 
 <style scoped>
+    a {  
+        color: #292b61;
+        text-decoration: none; 
+        } 
     .head {
         color: #292b61;
         padding-top:20px;
