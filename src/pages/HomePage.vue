@@ -75,14 +75,36 @@
                     </div>
                 </div>
                 <div class="mainBody">
-                        <div class="leftMainB">
-                            <div class="BigColor" style="text-align: center;background-color: #eff0f8;border-radius:0 0 24px 24px">
-                                Блок задач на сегодня
-                            </div>
+                    <div class="leftMainB">
+                        <div class="BigColor"
+                             style="text-align: center;background-color: #eff0f8;border-radius:0 0 24px 24px">
+                            Блок задач на сегодня
                         </div>
-                        <div class="rightMainB" style="float:right">
+                        <div>
+                            <quest-card
+                                    v-for="card in qCards"
+                                    v-bind:CardData="card"
+                                    v-on:click="handlerClick(card)"
+                                    v-on:check="handlerCheck(card)"
+                                    v-bind:key="card.id"
+                                    v-show="!card.isChecked"
+                            />
+                        </div>
+                        <div>
+                            <quest-card
+                                    style="opacity: 60%"
+                                    v-for="card in qCards"
+                                    v-bind:CardData="card"
+                                    v-on:click="handlerClick(card)"
+                                    v-on:check="handlerCheck(card)"
+                                    v-bind:key="card.id"
+                                    v-show=" card.isChecked"
+                            />
+                        </div>
+                    </div>
+                    <div class="rightMainB" style="float:right">
 
-                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -92,25 +114,33 @@
 
 <script>
     import UserApiService from "@/services/UserApiService";
+    import questCard from "@/components/questCard";
 
     export default {
         name: "Home",
+        components: {
+            questCard
+        },
         data: () => ({
             userData: null,
+            qCards:[]
         }),
         async mounted() {
             this.userData = await UserApiService.getById();
         },
         created() {
-
+            this.qCards=this.$store.state.qCards
         },
         methods: {
-            dropUser() {
-                this.$store.commit('dropUser');
+            handlerCheck(v) {
+                if(v.isChecked){
+                    v.isChecked = false;
+                }else{
+                    v.isChecked = true;
+                }
+                this.$store.commit('setCard',v);
+                console.log(this.$store.state.qCards)
             },
-            setUser() {
-                this.$store.commit('setUser');
-            }
         },
         computed: {
             user1() {
@@ -118,6 +148,17 @@
                     return [this.$store.state.user.email, this.$store.state.user.passwrd]
                 }
                 return ["email", "lol"]
+            },
+            // isCh() {
+            //     return this.qCard.isChecked
+            // },
+            kst(){
+                return this.$store.state.arf
+            }
+        },
+        watch: {
+            isCh: function () {
+                alert(this.qCard.isChecked)
             }
         }
     }
@@ -160,21 +201,25 @@
         font-size: 20px;
         color: #292b61;
     }
-    .VL{
-        padding-left:30px;
-        border-left:2px solid #98a0ce;
+
+    .VL {
+        padding-left: 30px;
+        border-left: 2px solid #98a0ce;
     }
-    .leftMainB{
+
+    .leftMainB {
         background-color: #dee1f8;
-        display:inline-block;
-        width:72%;
+        display: inline-block;
+        width: 72%;
     }
-    .rightMainB{
-        display:inline-block;
-        width:28%;
+
+    .rightMainB {
+        display: inline-block;
+        width: 28%;
     }
+
     .UserF {
-        padding-right: 200px;
+        padding-right: 220px;
         padding-top: 14px;
         background-color: #eff0f8;
         height: 200px;
