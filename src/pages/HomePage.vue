@@ -36,14 +36,14 @@
                 <img :src="require('@/assets/img/user.png')">
             </div>
             <div style="display: inline-block">
-                <div style="">
-                    <div style="color:orange;font-weight: bold;">
+                <div style="margin-left:40px">
+                    <div style="color:orange;font-weight: bold;font-size:28px;margin-bottom:10px">
                         Иванов Иван Иванович
                     </div>
-                    <div style="color:orange;">
+                    <div style="color:orange;font-size:20px;margin-bottom:10px">
                         Главный Специалист по работе с клиентами
                     </div>
-                    <div style="color: #292b61;">
+                    <div style="color: #292b61;font-size:16px;margin-bottom:10px">
                         Группа внутренних коммункаций и развития корпоративной культуры
                     </div>
                 </div>
