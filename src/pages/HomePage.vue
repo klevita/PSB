@@ -135,7 +135,7 @@
             this.userData = await UserApiService.getById();
         },
         created() {
-            this.$store.commit("setC")
+            /*this.$store.commit("setC")*/
             this.qCards=this.$store.state.qCards
         },
         methods: {
