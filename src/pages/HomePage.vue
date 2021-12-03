@@ -74,6 +74,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="mainBody">
+                        <div class="leftMainB">
+                            <div class="BigColor" style="text-align: center;background-color: #eff0f8;border-radius:0 0 24px 24px">
+                                Блок задач на сегодня
+                            </div>
+                        </div>
+                        <div class="rightMainB" style="float:right">
+
+                        </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -151,9 +162,17 @@
     }
     .VL{
         padding-left:30px;
-        border-left:4px solid #98a0ce;
+        border-left:2px solid #98a0ce;
     }
-
+    .leftMainB{
+        background-color: #dee1f8;
+        display:inline-block;
+        width:72%;
+    }
+    .rightMainB{
+        display:inline-block;
+        width:28%;
+    }
     .UserF {
         padding-right: 200px;
         padding-top: 14px;
