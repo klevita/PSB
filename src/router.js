@@ -39,7 +39,6 @@ const router = new VueRouter({
     routes
 });
 router.beforeEach((to, from, next) => {
-
     if(to.name !== "AuthPage"  && !store.state.user){
         console.log(store.state.user);
         next({ name: "AuthPage" });
