@@ -52,8 +52,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="mainP">
             <div class="VL">
                 <div class="mainHead">
@@ -104,7 +102,7 @@
                     </div>
                     <div class="rightMainB" style="float:right">
                         <IconCard class="icCard" cardImage='my-proj.svg' text="Мой проект и команда" link="/project"/>
-                        <IconCard class="icCard" cardImage='permission.svg' text="Доступ" link="/"/>
+                        <IconCard class="icCard" cardImage='permission.svg' text="Доступ" link="/connections"/>
                         <IconCard class="icCard" cardImage='command.svg' text="Команда банка" link="/"/>
                         <IconCard class="icCard" cardImage='support.svg' text="Поддержка" link="/"/>
                     </div>
@@ -140,7 +138,6 @@
         },
         methods: {
             handlerCheck(v) {
-
                 if(v.isChecked){
                     v.isChecked = false;
                 }else{
