@@ -6,14 +6,13 @@
             <p class="information">Возможно, вы ввели неправильный адрес, или страница была удалена</p>
             <btn color="3" text = "На главную" link="/home"></btn>
         </div>
-
     </div>
 </template>
 
 <script>
     import btn from "../components/uni-button"
     export default {
-        components: { btn},
+        components: { btn, IconCard},
         name: "NotFoundPage",
         data:()=>({
 
