@@ -32,10 +32,10 @@
             </div>
         </div>
         <div class="UserF">
-            <div style="display: inline-block">
+            <div style="display: inline-block;float:left;margin-left:200px">
                 <img :src="require('@/assets/img/user.png')">
             </div>
-            <div style="display: inline-block">
+            <div style="display: inline-block;float:left;margin-top:20px">
                 <div style="margin-left:40px">
                     <div style="color:orange;font-weight: bold;font-size:28px;margin-bottom:10px">
                         Иванов Иван Иванович
@@ -50,17 +50,17 @@
 
             </div>
 
-            <div style="display: inline-block;float:right;">
+            <div class="icon-group" style="display: inline-block;float:right; " >
                 <div style="margin-top:10px">
-                    <div style="display:inline-block;">
+                    <div class="typcInB" style="margin-right:15px">
                         <img :src="require('@/assets/img/phone.svg')" >
                     </div>
                     <div style="display:inline-block;">
                         77777777
                     </div>
                 </div>
-                <div style="margin-top:10px">
-                    <div style="display:inline-block;">
+                <div style="margin-top:10px" >
+                    <div class="typcInB" style="margin-left: 3px">
                         <img :src="require('@/assets/img/strange_phone.svg')" >
                     </div>
                     <div style="display:inline-block;">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div style="margin-top:10px">
-                    <div style="display:inline-block;">
+                    <div class="typcInB">
                         <img :src="require('@/assets/img/mail.svg')" >
                     </div>
                     <div style="display:inline-block;">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div style="margin-top:10px">
-                    <div style="display:inline-block;">
+                    <div class="typcInB" style="margin-left: 2px;margin-right:20px">
                         <img :src="require('@/assets/img/loop.svg')" >
                     </div>
                     <div style="display:inline-block;">
@@ -123,6 +123,15 @@
 </script>
 
 <style scoped>
+    .typcInB{
+        display:inline-block;
+        margin-right:20px;
+    }
+    .icon-group{
+        font-family: "gilroy-reguar";
+        font-size: 20px;
+        color: #292b61;
+    }
     .header {
         color: #292b61;
         padding-top:20px;
