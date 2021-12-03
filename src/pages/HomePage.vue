@@ -1,28 +1,46 @@
 <template>
     <div class="base">
-        
-     <div class="header"> 
-         <img :src="require('@/assets/img/Header.svg')" style= "width:100%">
-    </div>
-    <div class="d-flex">
-        <div> <img :src="require('@/assets/img/achieve.svg')" style= "width:100px"> </div>
-        <div>Мои достижения</div>
+
+        <div class="header">
+            <v-text-field
+                    class="search"
+                    label="Поиск по базе данных"
+                    prepend-inner-icon="mdi-magnify"
+                    filled
+                    rounded
+                    color="#EA5616"
+                    background-color="#EFF0F8"
+                    dense
+            ></v-text-field>
+            <div>
+                <div>
+                    <div style="display:inline-block;margin-top:14px;float:left;margin-right:20px">
+                        Мои оценки     &nbsp;&nbsp;&nbsp;  10
+                    </div>
+                    <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
+                        <img :src="require('@/assets/img/star.svg')" style="width:60px;height:60px;">
+                    </div>
+                    <!--<div style="display:inline-block;margin-top:14px;float:left">
+                        Мой рейтинг    10
+                    </div>
+                    <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
+
+                    </div>-->
+                </div>
+                <div>
+                    <div style="display:inline-block;margin-top:14px;float:left">
+                        Мои достижения
+                    </div>
+                    <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
+                        <img :src="require('@/assets/img/achieve.svg')" >
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="d-flex align-center">
-        <img :src="require('@/assets/img/Star1.svg')">
-        <div>10</div>
-        </div>
-    <div class="search">
-           <v-text-field
-            label="Поиск по базе данных"
-            prepend-inner-icon="mdi-magnify"
-            filled
-            rounded
-            color="#EA5616"
-            background-color="#EFF0F8"
-            dense
-          ></v-text-field>
-     </div>
+
+
+
+
 
     </div>
 </template>
@@ -58,21 +76,22 @@
 </script>
 
 <style scoped>
-   
-.base{
-   background:#EFF0F8;
-   min-height: 100vh;
-   position: absolute;
+    .header {
+        color: #292b61;
+        padding-top:20px;
+        padding-right:20px;
+        padding-left:150px;
+        background-image: url("../assets/img/Header.svg");
+        width: 100%;
+        height: 200px;
+    }
 
-}
+    .base {
 
-.search{
-    float: right;
-    position: relative;
-    top: -148px;
-    left: -30px;
-    width: 460px;
+    }
 
-}
+    .search {
+        float: right;
+    }
 
 </style>
