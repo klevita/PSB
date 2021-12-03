@@ -28,6 +28,11 @@ const routes = [
     {
         path: "*",
         redirect: "/404"
+    },
+    {
+        path: "/project",
+        name: "myProject",
+        component: () => import("@/pages/MyProjPage.vue")
     }
 ];
 

@@ -13,7 +13,7 @@
                 <span style="display: inline-block; margin-right:5px" v-for="item in CardData.imgs" v-bind:key="item">
                     <img v-bind:src="require(`../assets/img/${item}`)">
                 </span>
-                <span style="display: inline-block;float:right;margin-right:20px" >
+                <span style="display: inline-block;float:right; margin-right:20px">
                     <input
                             style="height:16px;width:16px"
                             type="checkbox"
