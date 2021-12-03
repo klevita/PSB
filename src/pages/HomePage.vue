@@ -135,10 +135,12 @@
             this.userData = await UserApiService.getById();
         },
         created() {
+            /*this.$store.commit("setC")*/
             this.qCards=this.$store.state.qCards
         },
         methods: {
             handlerCheck(v) {
+
                 if(v.isChecked){
                     v.isChecked = false;
                 }else{

@@ -1,7 +1,7 @@
 <template>
     <a class="questCard">
         <div style="position: relative;height:100%;width:100%">
-            <div style="font-size:20px;color:#34398E;font-family: gilroy-semibold">{{CardData.headr}}<br></div>
+            <div style="font-size:20px;color:#34398E;font-family: gilroy-semibold">{{CardData.headr}}</div>
             <div>
                 <ul style="font-size:16px;color:#34398E;font-family: gilroy-regular">
                     <li v-for="item in CardData.txt" v-bind:key="item">
@@ -53,6 +53,7 @@
 
 <style scoped>
     .questCard {
+        float:left;
         display:inline-block;
         padding: 10px;
         margin: 10px;

@@ -14,89 +14,70 @@ export default new Vuex.Store({
             {
                 id:1,
                 txt: [
-                    "Подписание трудового договора",
-                    "22222fasf2",
-                    "3333333"
+                    "Отметка о выполнении"
                 ],
                 isChecked: 0,
                 headr: "Подписание трудового договора",
                 imgs: [
-                    "note.svg",
-                    "chain.png",
+                    "pen.png",
 
                 ]
             },
             {
                 id:2,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "Заполняется на портале"
                 ],
                 isChecked: 0,
                 headr: "Увлечения",
                 imgs: [
                     "pen.png",
-                    "people.png",
-
                 ]
             },
             {
                 id:3,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "Ссылка на ресурс",
+                    "Отметка новым сотрудникам",
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Изучение процесса работы",
                 imgs: [
-                    "pen.png",
-                    "people.png",
-
+                    "chain.png",
                 ]
             },
             {
                 id:4,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "Опроc"
                 ],
                 isChecked: 0,
-                headr: "Подписание трудового договора",
+                headr: "Опрос по изученному материалу",
                 imgs: [
-                    "pen.png",
-                    "people.png",
+                    "note.svg",
 
                 ]
             },
             {
                 id:5,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "Ссылка на ресурс"
                 ],
                 isChecked: 0,
-                headr: "Подписание трудового договора",
+                headr: "Возможности, предоставляемые банком",
                 imgs: [
-                    "pen.png",
-                    "people.png",
+                    "chain.png",
 
                 ]
             },
             {
                 id:6,
                 txt: [
-                    "11111",
-                    "22222fasf2",
-                    "3333333"
+                    "Ссылка на ресурс"
                 ],
                 isChecked: 0,
-                headr: "Подписание трудового договора",
+                headr: "Эксплуатационная документация",
                 imgs: [
-                    "note.svg",
                     "chain.png",
 
                 ]
@@ -104,89 +85,50 @@ export default new Vuex.Store({
             {
                 id:7,
                 txt: [
-                    "11111",
-                    "22222fasf2",
-                    "3333333"
+                    "Встреча",
+                    "e-mail",
+
                 ],
                 isChecked: 0,
-                headr: "lagsasgsagl",
+                headr: "План на испытательный срок",
                 imgs: [
-                    "note.svg",
                     "chain.png",
+                    "people.png",
 
                 ]
             },
             {
                 id:8,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "ссылка на ресурс"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Что требуется от тебя",
                 imgs: [
-                    "pen.png",
-                    "people.png",
+                    "chain.png",
 
                 ]
             },
             {
                 id:9,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "ссылка на ресурс"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Правила героев ПСБ",
                 imgs: [
-                    "pen.png",
-                    "people.png",
+                    "chain.png",
 
                 ]
             },
             {
                 id:10,
                 txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
+                    "ссылка на ресурс"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Что тебе доступно в банке",
                 imgs: [
-                    "pen.png",
-                    "people.png",
-
-                ]
-            },
-            {
-                id:11,
-                txt: [
-                    "1112ffw11",
-                    "222af22fasf2",
-                    "3333wfa333"
-                ],
-                isChecked: 0,
-                headr: "lfl",
-                imgs: [
-                    "pen.png",
-                    "people.png",
-
-                ]
-            },
-            {
-                id:12,
-                txt: [
-                    "11111",
-                    "22222fasf2",
-                    "3333333"
-                ],
-                isChecked: 0,
-                headr: "lagsasgsagl",
-                imgs: [
-                    "note.svg",
                     "chain.png",
 
                 ]
@@ -196,6 +138,132 @@ export default new Vuex.Store({
     mutations:{
         setUser (state,user) {
             state.user=user;
+        },
+        setC(state){
+            state.qCards =[
+                {
+                    id:1,
+                    txt: [
+                        "Отметка о выполнении"
+                    ],
+                    isChecked: 0,
+                    headr: "Подписание трудового договора",
+                    imgs: [
+                        "pen.png",
+
+                    ]
+                },
+                {
+                    id:2,
+                    txt: [
+                        "Заполняется на портале"
+                    ],
+                    isChecked: 0,
+                    headr: "Увлечения",
+                    imgs: [
+                        "pen.png",
+                    ]
+                },
+                {
+                    id:3,
+                    txt: [
+                        "Ссылка на ресурс",
+                        "Отметка новым сотрудникам",
+                    ],
+                    isChecked: 0,
+                    headr: "Изучение процесса работы",
+                    imgs: [
+                        "chain.png",
+                    ]
+                },
+                {
+                    id:4,
+                    txt: [
+                        "Опроc"
+                    ],
+                    isChecked: 0,
+                    headr: "Опрос по изученному материалу",
+                    imgs: [
+                        "note.svg",
+
+                    ]
+                },
+                {
+                    id:5,
+                    txt: [
+                        "Ссылка на ресурс"
+                    ],
+                    isChecked: 0,
+                    headr: "Возможности, предоставляемые банком",
+                    imgs: [
+                        "chain.png",
+
+                    ]
+                },
+                {
+                    id:6,
+                    txt: [
+                        "Ссылка на ресурс"
+                    ],
+                    isChecked: 0,
+                    headr: "Эксплуатационная документация",
+                    imgs: [
+                        "chain.png",
+
+                    ]
+                },
+                {
+                    id:7,
+                    txt: [
+                        "Встреча",
+                        "e-mail",
+
+                    ],
+                    isChecked: 0,
+                    headr: "План на испытательный срок",
+                    imgs: [
+                        "chain.png",
+                        "people.png",
+
+                    ]
+                },
+                {
+                    id:8,
+                    txt: [
+                        "ссылка на ресурс"
+                    ],
+                    isChecked: 0,
+                    headr: "Что требуется от тебя",
+                    imgs: [
+                        "chain.png",
+
+                    ]
+                },
+                {
+                    id:9,
+                    txt: [
+                        "ссылка на ресурс"
+                    ],
+                    isChecked: 0,
+                    headr: "Правила героев ПСБ",
+                    imgs: [
+                        "chain.png",
+
+                    ]
+                },
+                {
+                    id:10,
+                    txt: [
+                        "ссылка на ресурс"
+                    ],
+                    isChecked: 0,
+                    headr: "Что тебе доступно в банке",
+                    imgs: [
+                        "chain.png",
+
+                    ]
+                }
+            ]
         },
         setCard (state,card) {
             for(let i=0;i<12;i++){
