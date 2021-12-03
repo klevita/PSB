@@ -1,36 +1,5 @@
 <template>
     <div class="base">
-
-        <div class="header">
-            <v-text-field
-                    class="search"
-                    label="Поиск по базе данных"
-                    prepend-inner-icon="mdi-magnify"
-                    filled
-                    rounded
-                    color="#EA5616"
-                    background-color="#EFF0F8"
-                    dense
-            ></v-text-field>
-            <div>
-                <div>
-                    <div style="display:inline-block;margin-top:14px;float:left;margin-right:20px">
-                        Мои оценки     &nbsp;&nbsp;&nbsp;  10
-                    </div>
-                    <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
-                        <img :src="require('@/assets/img/star.svg')" style="width:60px;height:60px;">
-                    </div>
-                </div>
-                <div>
-                    <div style="display:inline-block;margin-top:14px;float:left">
-                        Мои достижения
-                    </div>
-                    <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
-                        <img :src="require('@/assets/img/achieve.svg')" >
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="UserF">
             <div style="display: inline-block;float:left;margin-left:200px">
                 <img :src="require('@/assets/img/user.png')">
@@ -126,21 +95,12 @@
     .typcInB{
         display:inline-block;
         margin-right:20px;
+
     }
     .icon-group{
         font-family: "gilroy-reguar";
         font-size: 20px;
         color: #292b61;
-    }
-    .header {
-        color: #292b61;
-        padding-top:20px;
-        padding-right:20px;
-        padding-left:150px;
-        background-image: url("../assets/img/Header.svg");
-        width: 100%;
-        height: 200px;
-        margin-bottom:-8px;
     }
 
     .UserF {
@@ -150,8 +110,5 @@
         height:200px;
     }
 
-    .search {
-        float: right;
-    }
 
 </style>

@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from "@/store/store"
 Vue.use(VueRouter);
 
 const routes = [
@@ -38,10 +39,11 @@ const router = new VueRouter({
     routes
 });
 router.beforeEach((to, from, next) => {
-    // if (to.name === "Mobile" && !isMobile) {
-    //     next(from);
-    //     return
-    // }
+
+    if(to.name !== "AuthPage"  && !store.state.user){
+        console.log(store.state.user);
+        next({ name: "AuthPage" });
+    }
     next();
 
 });
