@@ -197,7 +197,6 @@ export default new Vuex.Store({
                     headr: "Возможности, предоставляемые банком",
                     imgs: [
                         "chain.png",
-
                     ]
                 },
                 {
