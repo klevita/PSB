@@ -12,7 +12,7 @@
         ></v-text-field>
         <div>
             <div>
-                <div style="display:inline-block;margin-top:14px;float:left;margin-right:20px">
+                <div style="display:inline-block;margin-top:14px;float:left; font-family: gilroy-reguar; margin-right:20px">
                     Мои оценки     &nbsp;&nbsp;&nbsp;  10
                 </div>
                 <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
@@ -21,7 +21,7 @@
             </div>
             <div>
                 <div style="display:inline-block;margin-top:14px;float:left">
-                   <a href="/achieves" style="color: #292b61;">Мои достижения</a> 
+                   <a href="/achieves" style="color: #292b61; font-family: gilroy-reguar;">Мои достижения</a> 
                 </div>
                 <div style="display:inline-block;margin-top:-6px;margin-left:-20px">
                     <img :src="require('@/assets/img/achieve.svg')" >

@@ -6,13 +6,13 @@
             </div>
             <div style="display: inline-block;float:left;margin-top:20px">
                 <div style="margin-left:40px">
-                    <div style="color:#EA5616;font-weight: bold;font-size:28px;margin-bottom:10px">
-                        Иванов Иван Иванович
+                    <div style="color:#EA5616; font-family: gilroy-reguar; font-weight: bold;font-size:28px;margin-bottom:10px">
+                        Туктамышева Лилия Ильинична
                     </div>
-                    <div style="color:#EA5616;font-size:20px;margin-bottom:10px">
+                    <div style="color:#EA5616;font-size:20px; font-family: gilroy-reguar; margin-bottom:10px">
                         Главный Специалист по работе с клиентами
                     </div>
-                    <div style="color: #292b61;font-size:16px;margin-bottom:10px">
+                    <div style="color: #292b61;font-size:16px;font-family: gilroy-reguar; margin-bottom:10px">
                         Группа внутренних коммункаций и развития корпоративной культуры
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <img :src="require('@/assets/img/phone.svg')">
                     </div>
                     <div style="display:inline-block;">
-                        77777777
+                        +7(925)-085-20-00
                     </div>
                 </div>
                 <div style="margin-top:10px">
@@ -31,7 +31,7 @@
                         <img :src="require('@/assets/img/strange_phone.svg')">
                     </div>
                     <div style="display:inline-block;">
-                        77777777
+                        +7(495)-00-01
                     </div>
                 </div>
                 <div style="margin-top:10px">
@@ -47,7 +47,7 @@
                         <img :src="require('@/assets/img/loop.svg')">
                     </div>
                     <div style="display:inline-block;">
-                        Мои достижения
+                        Москва, Бербеневская Набережная, д7
                     </div>
                 </div>
             </div>
@@ -104,9 +104,9 @@
                     </div>
                     <div class="rightMainB" style="float:right">
                         <IconCard class="icCard" cardImage='my-proj.svg' text="Мой проект и команда" link="/"/>
-                        <IconCard class="icCard" cardImage='my-proj.svg' text="Доступ" link="/"/>
-                        <IconCard class="icCard" cardImage='my-proj.svg' text="Команда банка" link="/"/>
-                        <IconCard class="icCard" cardImage='my-proj.svg' text="Поддержка" link="/"/>
+                        <IconCard class="icCard" cardImage='permission.svg' text="Доступ" link="/"/>
+                        <IconCard class="icCard" cardImage='command.svg' text="Команда банка" link="/"/>
+                        <IconCard class="icCard" cardImage='support.svg' text="Поддержка" link="/"/>
                     </div>
 
                 </div>
@@ -214,6 +214,7 @@
     }
     .icCard{
         float:right;
+        margin-bottom: 30px;
     }
     .leftMainB {
         background-color: #dee1f8;

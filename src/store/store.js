@@ -14,12 +14,12 @@ export default new Vuex.Store({
             {
                 id:1,
                 txt: [
-                    "11111",
+                    "Подписание трудового договора",
                     "22222fasf2",
                     "3333333"
                 ],
                 isChecked: 0,
-                headr: "lagsasgsagl",
+                headr: "Подписание трудового договора",
                 imgs: [
                     "note.svg",
                     "chain.png",
@@ -34,7 +34,7 @@ export default new Vuex.Store({
                     "3333wfa333"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Увлечения",
                 imgs: [
                     "pen.png",
                     "people.png",
@@ -64,7 +64,7 @@ export default new Vuex.Store({
                     "3333wfa333"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Подписание трудового договора",
                 imgs: [
                     "pen.png",
                     "people.png",
@@ -79,7 +79,7 @@ export default new Vuex.Store({
                     "3333wfa333"
                 ],
                 isChecked: 0,
-                headr: "lfl",
+                headr: "Подписание трудового договора",
                 imgs: [
                     "pen.png",
                     "people.png",
@@ -94,7 +94,7 @@ export default new Vuex.Store({
                     "3333333"
                 ],
                 isChecked: 0,
-                headr: "lagsasgsagl",
+                headr: "Подписание трудового договора",
                 imgs: [
                     "note.svg",
                     "chain.png",

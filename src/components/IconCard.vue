@@ -38,6 +38,7 @@ export default {
 	cursor: pointer;
 	background-color: #eff0f8;
 	border-radius: 20px;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.07), -4px -4px 13px #FFFFFF, 6px 6px 36px rgba(0, 0, 0, 0.06);
 }
 .text { 
 	position: absolute;
