@@ -36,7 +36,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	background-color: #ECEEFD;
+	background-color: #eff0f8;
 	border-radius: 20px;
 }
 .text { 

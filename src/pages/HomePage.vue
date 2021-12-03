@@ -103,7 +103,10 @@
                         </div>
                     </div>
                     <div class="rightMainB" style="float:right">
-
+                        <IconCard class="icCard" cardImage='my-proj.svg' text="Мой проект и команда" link="/"/>
+                        <IconCard class="icCard" cardImage='my-proj.svg' text="Доступ" link="/"/>
+                        <IconCard class="icCard" cardImage='my-proj.svg' text="Команда банка" link="/"/>
+                        <IconCard class="icCard" cardImage='my-proj.svg' text="Поддержка" link="/"/>
                     </div>
 
                 </div>
@@ -114,14 +117,15 @@
 
 <script>
     import UserApiService from "@/services/UserApiService";
-
+    import IconCard from "../components/IconCard"
     import questCard from "@/components/questCard";
 
 
     export default {
         name: "Home",
         components: {
-            questCard
+            questCard,
+            IconCard
         },
         data: () => ({
             userData: null,
@@ -208,7 +212,9 @@
         padding-left: 30px;
         border-left: 2px solid #98a0ce;
     }
-
+    .icCard{
+        float:right;
+    }
     .leftMainB {
         background-color: #dee1f8;
         display: inline-block;
