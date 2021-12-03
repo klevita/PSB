@@ -114,7 +114,9 @@
 
 <script>
     import UserApiService from "@/services/UserApiService";
+
     import questCard from "@/components/questCard";
+
 
     export default {
         name: "Home",
