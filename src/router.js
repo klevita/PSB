@@ -31,6 +31,11 @@ const routes = [
         component: () => import("@/pages/Connections.vue")
     },
     {
+        path: "/test",
+        name: "Test",
+        component: () => import("@/pages/Tests.vue")
+    },
+    {
         path: "*",
         redirect: "/404"
     }
@@ -50,7 +55,6 @@ const router = new VueRouter({
 });
 router.beforeEach((to, from, next) => {
     if(to.name !== "AuthPage"  && !store.state.user){
-        console.log(store.state.user);
         next({ name: "AuthPage" });
     }
     next();

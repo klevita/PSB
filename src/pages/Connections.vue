@@ -122,7 +122,7 @@
             <div>
                 <div style="" class="BigColor">Нормативные акты</div>
                 <ul ><li class="MidColor3"><a>Система «PSB On-Line». Руководство пользователя</a></li></ul>
-            </div>  
+            </div>
         </div>
 
     </div>

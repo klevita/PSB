@@ -10,6 +10,7 @@ export default new Vuex.Store({
         user: null,
         navigation: { path: '/home' },
         arf:[0,0,0,0,0,0,0,0,0,0,0,0],
+        test:false,
         qCards: [
             {
                 id:1,
@@ -138,6 +139,9 @@ export default new Vuex.Store({
     mutations:{
         setUser (state,user) {
             state.user=user;
+        },
+        setCh (state) {
+            state.test=true;
         },
         setC(state){
             state.qCards =[
