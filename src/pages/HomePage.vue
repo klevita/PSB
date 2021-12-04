@@ -110,6 +110,9 @@
                 </div>
             </div>
         </div>
+        <div class="lil" v-show="is_img">
+
+        </div>
     </div>
 </template>
 
@@ -148,6 +151,9 @@
             },
         },
         computed: {
+            is_img(){
+                return this.$store.state.user.is_admin
+            },
             user1() {
                 if (this.$store.state.user) {
                     return [this.$store.state.user.email, this.$store.state.user.passwrd]
@@ -194,7 +200,14 @@
         padding-left: 170px;
         padding-right: 200px;
     }
-
+    .lil{
+        background-image: url(../assets/img/bigBadSleep.svg);
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:1080px;
+    }
     .typcInB {
         display: inline-block;
         margin-right: 20px;

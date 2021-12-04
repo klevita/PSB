@@ -177,7 +177,6 @@
 
         font-size: 28px
     }
-
     .BigColor2 {
         color: #292b61;
         font-weight: bold;
@@ -185,12 +184,10 @@
         text-decoration: underline;
         margin-right:10px;
     }
-
     .MidColor {
         color: red;
         font-size: 20px;
     }
-
     .MidColor2 {
         color: green;
         font-size: 20px;
@@ -206,7 +203,6 @@
         color: #292b61;
         font-size: 16px
     }
-
     .Mwrapper {
         padding-top: 30px;
         padding-left: 200px;

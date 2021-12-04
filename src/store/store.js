@@ -140,6 +140,9 @@ export default new Vuex.Store({
         setUser (state,user) {
             state.user=user;
         },
+        setUser2 (state,user) {
+            state.user=user;
+        },
         setCh (state) {
             state.test=true;
         },

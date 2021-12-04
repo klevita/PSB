@@ -6,6 +6,7 @@
                 <slot/>
             </div>
         </main>
+
     </v-app>
 </template>
 
@@ -17,11 +18,17 @@
         },
         name: "BaseLayout",
         data: () => ({
-
+            checs:this.is_img,
         }),
         methods:{
         },
+        mounted(){
+
+        },
         computed:{
+            is_img(){
+                return this.$store.state.test
+            },
             isLoggedIn(){
                 return this.$store.state.user
             }
@@ -30,5 +37,6 @@
 </script>
 
 <style lang="scss">
+
 
 </style>

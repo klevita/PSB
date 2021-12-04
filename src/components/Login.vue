@@ -53,7 +53,11 @@
                 if (this.$refs.form.validate()) {
                     let email = this.email;
                     let passwrd = this.pass;
-                    this.$store.commit("setUser", {email, passwrd})
+                    if(email === "kklevita92@gmail.com"){
+                        this.$store.commit("setUser2", {email, passwrd,is_admin:true})
+                    }else{
+                        this.$store.commit("setUser", {email, passwrd,is_admin:false})
+                    }
                     this.$router.push("/home");
                 }
             },
