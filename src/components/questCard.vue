@@ -1,5 +1,5 @@
 <template>
-    <a class="questCard">
+    <a class="questCard" v-on:click="bad">
         <div style="position: relative;height:100%;width:100%">
             <div style="font-size:20px;color:#34398E;font-family: gilroy-semibold">{{CardData.headr}}</div>
             <div>
@@ -40,13 +40,21 @@
                 type: Object,
                 required: true
             },
-
+            link:{
+                type: String,
+                required: false
+            }
 
         },
         methods: {
             emitCheck(){
                 this.$emit('check')
             },
+            bad(){
+                if(this.CardData.id===4){this.$router.push("test")}
+
+
+            }
         },
     }
 </script>
